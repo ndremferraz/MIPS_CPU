@@ -27,14 +27,13 @@ module registerFile32word(rs, rt, rd, rdIn, rdWrite,rsOut, rtOut, clock );
     assign rsOut = registerFile[rs];
     assign rtOut = registerFile[rt];
     
-    always begin 
+    always @(posedge clock) begin 
         
         //Each bit in regsiterFile will have a data input and a control input
         //the data input will be connected to rdIn
         //the data input is only enabled when the control input is set
         //the control input will be connected to the encoder output for each respective register AND the rdWrite input
-        @(posedge clock) if (rdWrite) registerFile[rd] <= rdIn;
-        
+        if (rdWrite) registerFile[rd] <= rdIn;    
     end
     
 endmodule
