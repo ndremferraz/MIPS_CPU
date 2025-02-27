@@ -1,4 +1,4 @@
-# MIPS_CPU
+# MIPS_CPU (Work in Progres)
 
 I started this project because I wanted to put to use some of the things that I learned from my computer organization class
 
