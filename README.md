@@ -13,9 +13,11 @@ To keep the CPU simple, it will only be capable of executing the following instr
 - [X] Implement 32-bit Register File
 - [X] Implement 32-bit ALU
 - [X] Implement Memory
-- [ ] Implement Instrution Decoder 
+- [X] Implement ALU Control
+- [X] Implement Main Control Unit 
 - [X] Test 32-bit Register File
-- [ ] Test 32-bit ALU
-- [ ] Test Instruction Decoder
+- [X] Test Memory 
+- [X] Test 32-bit ALU
+- [ ] Test Main Control Unit
 - [ ] Implement Data Paths
 - [ ] Test Data Paths 
