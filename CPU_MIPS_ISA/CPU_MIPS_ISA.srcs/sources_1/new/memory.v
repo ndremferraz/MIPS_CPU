@@ -11,6 +11,7 @@ module memory(
                                  
     reg[7:0] memory[1023:0];
     
+    //writes on positive clk edge 
     always @(posedge clk) begin
         if(write) begin
             //big endian: using address of left-most bit as the word address
@@ -22,6 +23,7 @@ module memory(
         end  
    end
    
+   //reads at anytime in the clock cycle 
     always @(*) begin 
         if(read) begin                             
             read_data[31:24] = memory[ALU_result_address];        
