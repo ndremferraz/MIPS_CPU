@@ -6,11 +6,15 @@
 
 For some implementations I ended up copying some code from the book and I intend to claim no propriety over it. 
 
+To keep the CPU simple, it will only be capable of executing the following instructions:
+
+
+
 - [X] Implement 32-bit Register File
 - [X] Implement 32-bit ALU
 - [X] Implement Memory
 - [ ] Implement Instrution Decoder 
-- [ ] Test 32-bit Register File
+- [X] Test 32-bit Register File
 - [ ] Test 32-bit ALU
 - [ ] Test Instruction Decoder
 - [ ] Implement Data Paths
