@@ -7,9 +7,12 @@
 For some implementations I ended up copying some code from the book and I intend to claim no propriety over it. 
 
 To keep the CPU simple, it will only be capable of executing the following instructions:
+-  R-type: add, sub, and, or, stl
+-  lw/sw
+-  beq 
 
 
-
+### Progress
 - [X] Implement 32-bit Register File
 - [X] Implement 32-bit ALU
 - [X] Implement Memory
