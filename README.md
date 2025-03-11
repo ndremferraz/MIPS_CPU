@@ -21,6 +21,7 @@ To keep the CPU simple, it will only be capable of executing the following instr
 - [X] Test 32-bit Register File
 - [X] Test Memory 
 - [X] Test 32-bit ALU
-- [ ] Test Main Control Unit
-- [ ] Implement Data Paths
-- [ ] Test Data Paths 
+- [X] Test ALU Control 
+- [X] Test Main Control Unit
+- [X] Implement Data Paths
+- [ ] Test CPU core 
