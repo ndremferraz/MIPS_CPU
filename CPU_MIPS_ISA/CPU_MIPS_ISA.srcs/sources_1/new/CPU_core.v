@@ -30,8 +30,10 @@ module CPU_core(
     wire[31:0] WriteData, ALU_2nd_operand, branchAddress, branchOffset;
     wire[31:0] pcPlus4, branchPlusOffset;
     
+    
     assign dataMemAddress = ALUout;
     assign branchSelector = Branch & zero;
+    assign dataMemDataIn = data2;
     
     
     control_unit main_control(
@@ -50,7 +52,7 @@ module CPU_core(
                     instruction[5:0],
                     ALUCtl);
                     
-    selector32bit branch_selector(pcPlus4, branchPlusOffset, branchAddress);
+    selector32bit branch_selector(pcPlus4, branchPlusOffset, branchSelector, branchAddress);
                     
      selector32bit writedata_sel(
                     ALUout, 
@@ -62,7 +64,7 @@ module CPU_core(
                     data2, 
                     {16'd0,instruction[15:0]}, 
                     ALUSrc, 
-                    ALU_2ndOperand);
+                    ALU_2nd_operand);
                     
     selector5bit writeregister_sel(
                     instruction[20:16], instruction[15:11],
@@ -73,7 +75,7 @@ module CPU_core(
                     clk, 
                     RegWrite, 
                     instruction[25:21],
-                    instruction[20:15],
+                    instruction[20:16],
                     WriteRegister,
                     WriteData,
                     data1,
@@ -93,7 +95,9 @@ module CPU_core(
      ALU32bit branch_calculator(4'd2, pcPlus4, branchOffset, branchPlusOffset);
      
      
-     
+     always @(posedge clk) begin 
+        program_counter <= branchAddress;
+     end
           
 
 endmodule
