@@ -31,17 +31,18 @@ module CPU_core(
     wire[31:0] pcPlus4, branchPlusOffset;
     
     
-    assign dataMemAddress = ALUout;
-    assign branchSelector = Branch & zero;
-    assign dataMemDataIn = data2;
+    assign dataMemAddress = ALUout; //CPU core output, simple output of the ALU used to calculate address usign base and offset
+    assign branchSelector = Branch & zero; //will used offsetted address in zero(comming from ALU) and branch(comming from Control Unit) are both truth
+    assign dataMemDataIn = data2; //CPU core output, data that gets written to memory comes from register output 2
     
     
+    //main control will receive the OpCode as an input 
     control_unit main_control(
                     instruction[31:26],
                     RegDst,
                     Branch,
-                    dataMemRead,
-                    dataMemWrite,
+                    dataMemRead, //CPU core output 
+                    dataMemWrite, //CPU core output
                     ALUSrc,
                     MemtoReg,
                     RegWrite,
@@ -49,7 +50,7 @@ module CPU_core(
                     
      ALUControl alu_control(
                     ALUOp,
-                    instruction[5:0],
+                    instruction[5:0], //funcCode from Instruction
                     ALUCtl);
                     
     selector32bit branch_selector(pcPlus4, branchPlusOffset, branchSelector, branchAddress);

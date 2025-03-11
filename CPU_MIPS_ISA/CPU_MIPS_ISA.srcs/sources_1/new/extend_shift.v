@@ -22,6 +22,7 @@
 
 module extend_shift(input wire[15:0] offset, output reg[31:0] branch_address);
         
+        //needed to write offset to branch instruction
         always @(*) branch_address <= {16'd0, offset} << 2;
         
 endmodule

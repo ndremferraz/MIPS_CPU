@@ -14,8 +14,11 @@ module register32x32bit(
                 
                 reg[31:0] register[31:0]; //32x32-bit registers as specified by the architecture 
                 
+                
                 assign data1 = register[read1]; //reads data at address read1 to wire data1
                 assign data2 = register[read2]; //reads data at address read2 to wire data2
+                 
+                 always @(*) register[5'd0] = 32'd0;  //as per MIPS architecture 0th register $zero always stores 0
                  
                  //at positive clock edge will write data to register if write enabled
                 always @(posedge clk) if(write_enable) register[write_reg] <= write_data;

@@ -20,5 +20,3 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ferra/RUNNINGFILES/Verilog
 INFO: [VRFC 10-311] analyzing module selector5bit
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ferra/RUNNINGFILES/Verilog/Verilog-2025/MIPS-CPU/MIPS_CPU/CPU_MIPS_ISA/CPU_MIPS_ISA.srcs/sim_1/new/CPU_core_tb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module CPU_core_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ferra/RUNNINGFILES/Verilog/Verilog-2025/MIPS-CPU/MIPS_CPU/CPU_MIPS_ISA/CPU_MIPS_ISA.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
