@@ -9,7 +9,24 @@ For some implementations I ended up copying some code from the book and I intend
 To keep the CPU simple, it will only be capable of executing the following instructions:
 -  R-type: add, sub, and, or, stl
 -  lw/sw
--  beq 
+-  beq
+
+The following C code was used to test the CPU:
+char var1 = var2 + var 3; 
+var2 = var3 || var4;
+if(var2 == var1) {}
+
+Which translated to the following MIPS 2000 instructions:
+lw $t1, 4($zero)
+lw $t2, 8($zero)
+lw $t2, 8($zero)
+add $t0, $t1, $t2
+or $t1, $t2, $t3
+beq $t0, $t1, 3
+sw $t0, 0($zero)
+sw $t1, 4($zero) 
+sw $t2, 8($zero)
+sw $t3, 12($zero)
 
 
 ### Progress
