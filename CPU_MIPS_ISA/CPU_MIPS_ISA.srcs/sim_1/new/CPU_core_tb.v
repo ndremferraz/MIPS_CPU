@@ -3,18 +3,15 @@
 
 module CPU_core_tb;
 
-    reg clk;
+    reg clk, pc_reset;
     reg[31:0] program_counter;
     
     wire dataMemRead, dataMemWrite;
     wire[31:0] instruction_out, dataMemOut, dataMemIn, dataMemAddress, program_counter_wire; 
     
     integer i;
-    
-    assign program_counter_wire = 512;
-    
-    always @(*) program_counter <= program_counter_wire;
-    
+   
+
     memory mem_instruction( .clk(clk), 
                                             .write(1'b0),
                                             .read(1'b1),
@@ -25,7 +22,7 @@ module CPU_core_tb;
     CPU_core cpu(.clk(clk),
                           .dataMemDataOut(dataMemOut),
                           .instruction(instruction_out),
-                          .program_counter(program_counter_wire),
+                          .program_counter(program_counter),
                           .dataMemWrite(dataMemWrite),
                           .dataMemRead(dataMemRead),
                           .dataMemAddress(dataMemAddress),
@@ -68,7 +65,8 @@ module CPU_core_tb;
         sw $t2, 8($zero)
         sw $t3, 12($zero)        
         */
-        #1 program_counter = 512; clk = 0; //1st instruction address
+        #1 pc_reset = 0; clk = 0; //1st instruction address
+        #1 pc_reset = 1;
         
         for(i=0;i<18;i = i + 1) begin 
             #1 clk = ~clk;

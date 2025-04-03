@@ -1,25 +1,17 @@
 Vivado Simulator v2024.2.0
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: C:/Vivado/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot CPU_core_tb_behav xil_defaultlib.CPU_core_tb xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Vivado/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot branch_calculator_tb_behav xil_defaultlib.branch_calculator_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'ALU_result_address' [C:/Users/ferra/RUNNINGFILES/Verilog/Verilog-2025/MIPS-CPU/MIPS_CPU/CPU_MIPS_ISA/CPU_MIPS_ISA.srcs/sim_1/new/CPU_core_tb.v:21]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.memory
-Compiling module xil_defaultlib.control_unit
-Compiling module xil_defaultlib.funcCodeDecoder
-Compiling module xil_defaultlib.ALUControl
-Compiling module xil_defaultlib.selector32bit
-Compiling module xil_defaultlib.selector5bit
-Compiling module xil_defaultlib.register32x32bit
-Compiling module xil_defaultlib.ALU32bit
 Compiling module xil_defaultlib.extend_shift
-Compiling module xil_defaultlib.CPU_core
-Compiling module xil_defaultlib.CPU_core_tb
+Compiling module xil_defaultlib.selector32bit
+Compiling module xil_defaultlib.branch_calculator
+Compiling module xil_defaultlib.branch_calculator_tb
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot CPU_core_tb_behav
+Built simulation snapshot branch_calculator_tb_behav
