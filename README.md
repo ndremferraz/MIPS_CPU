@@ -1,4 +1,4 @@
-# MIPS_CPU (Work in Progres🚥)V1
+# MIPS_CPU V1
 
 ## For simplicty version 1 will be non-pipelined and it assumes a single block of memory 
 
@@ -24,4 +24,4 @@ To keep the CPU simple, it will only be capable of executing the following instr
 - [X] Test ALU Control 
 - [X] Test Main Control Unit
 - [X] Implement Data Paths
-- [ ] Test CPU core 
+- [X] Test CPU core 
